@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;display=swap');
+      .txt { font-family: 'Fira Code', monospace; font-size: 14px; }
+      .prompt { fill: #7ee787; font-weight: 600; }
+      .cmd { fill: #d2a8ff; }
+      .file { fill: #58a6ff; }
+      .brace { fill: #f0f6fc; }
+      .key { fill: #79c0ff; }
+      .val { fill: #a5d6ff; }
+      .colon { fill: #8b949e; }
+      .comma { fill: #8b949e; }
+      .title-text { font-family: 'Fira Code', monospace; font-size: 13px; fill: #8b949e; }
+      .cursor { fill: #7ee787; animation: blink 1s infinite; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="798" height="358" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Titlebar Header -->
+  <path d="M 1 13 C 1 6.37 6.37 1 13 1 L 787 1 C 793.63 1 799 6.37 799 13 L 799 42 L 1 42 Z" fill="#161b22"/>
+  <line x1="1" y1="42" x2="799" y2="42" stroke="#30363d" stroke-width="1"/>
+
+  <!-- macOS Red Yellow Green Dots -->
+  <circle cx="22" cy="21" r="6.5" fill="#ff5f56"/>
+  <circle cx="42" cy="21" r="6.5" fill="#ffbd2e"/>
+  <circle cx="62" cy="21" r="6.5" fill="#27c93f"/>
+
+  <!-- Window Title -->
+  <text x="400" y="25" text-anchor="middle" class="title-text">manav@dev — zsh</text>
+
+  <!-- Terminal Content Lines -->
+  <g transform="translate(25, 75)">
+    <!-- Command Line -->
+    <text class="txt">
+      <tspan class="prompt">&gt; </tspan>
+      <tspan class="cmd">cat </tspan>
+      <tspan class="file">profile.json</tspan>
+    </text>
+
+    <!-- JSON Start -->
+    <text y="30" class="txt brace">{</text>
+
+    <!-- Key Values -->
+    <text y="60" class="txt">
+      <tspan x="20" class="key">"name"</tspan>
+      <tspan class="colon">     : </tspan>
+      <tspan class="val">"Manav Mishra"</tspan>
+      <tspan class="comma">,</tspan>
+    </text>
+
+    <text y="90" class="txt">
+      <tspan x="20" class="key">"role"</tspan>
+      <tspan class="colon">     : </tspan>
+      <tspan class="val">"AI/ML Developer &amp; Full-Stack Developer"</tspan>
+      <tspan class="comma">,</tspan>
+    </text>
+
+    <text y="120" class="txt">
+      <tspan x="20" class="key">"status"</tspan>
+      <tspan class="colon">   : </tspan>
+      <tspan class="val">"3rd Year B.Tech Student"</tspan>
+      <tspan class="comma">,</tspan>
+    </text>
+
+    <text y="150" class="txt">
+      <tspan x="20" class="key">"location"</tspan>
+      <tspan class="colon"> : </tspan>
+      <tspan class="val">"India"</tspan>
+      <tspan class="comma">,</tspan>
+    </text>
+
+    <text y="180" class="txt">
+      <tspan x="20" class="key">"goal"</tspan>
+      <tspan class="colon">     : </tspan>
+      <tspan class="val">"Build intelligent systems that solve real-world problems."</tspan>
+    </text>
+
+    <!-- JSON End -->
+    <text y="210" class="txt brace">}</text>
+
+    <!-- Bottom Active Prompt -->
+    <text y="245" class="txt">
+      <tspan class="prompt">&gt; </tspan>
+      <tspan class="cursor">█</tspan>
+    </text>
+  </g>
+</svg>
